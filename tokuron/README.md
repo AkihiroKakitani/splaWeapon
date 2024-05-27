@@ -7,4 +7,4 @@
 次のコマンドを使用して、このアプリケーションをインストールします。
 
 ```bash
-pip install weapon-selector1
+pip install weapon-selector
