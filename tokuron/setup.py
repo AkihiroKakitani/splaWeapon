@@ -1,22 +1,28 @@
+# setup.py
 from setuptools import setup, find_packages
 
 setup(
-    name='weapon-selector1',
-    version='0.1',
-    py_modules=['weapon-selector1'],
-    install_requires=[],
-    url='https://github.com/AkihiroKakitani/splaWeapon.git',  # リポジトリのURL
-    author='kakitaniakihiro',
-    author_email='s2222010@stu.musashino-u.ac.jp',
-    license='MIT',
+    name="weapon_selector",
+    version="0.1.1",
     packages=find_packages(),
-    classifiers=[
-        'Development Status :: 3 - Alpha',
-        'Intended Audience :: Developers',
-        'Topic :: Games/Entertainment',
-        'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.9',
+    install_requires=[
+        "tk"
     ],
+    entry_points={
+        "console_scripts": [
+            "weapon_selector=weapon_selector.app:main"
+        ]
+    },
+    author="kakitaniakihiro",
+    author_email="s2222010@stu.musashino-u.ac.jp",
+    description="A simple Splatoon weapon selector assistant",
+    long_description=open("README.md", "r", encoding="utf-8").read(),
+    long_description_content_type="text/markdown",
+    url="https://github.com/AkihiroKakitani/splaWeapon.git",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.6',
 )
