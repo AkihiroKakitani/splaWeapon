@@ -1,3 +1,4 @@
+# weapon_selector/app.py
 import tkinter as tk
 from tkinter import messagebox
 
@@ -68,7 +69,11 @@ class WeaponSelectorApp:
 
         messagebox.showinfo("おすすめの武器", "適した武器が見つかりませんでした。")
 
-if __name__ == "__main__":
+def main():
     root = tk.Tk()
     app = WeaponSelectorApp(root)
     root.mainloop()
+
+if __name__ == "__main__":
+    main()
+
